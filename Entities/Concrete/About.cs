@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class AboutUs : BaseEntity
+    public class About : BaseEntity
     {
         public string Description { get; set; }
         public string ImageUrl { get; set; }
