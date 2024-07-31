@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<User>(getUser, "User was not found");
         }
 
-        public IResult Update(int id, User user)
+        public IResult Update(User user)
         {
-            User updateUser = _userDal.Get(u => u.Id == id);
+            User updateUser = _userDal.Get(u => u.Id == user.Id);
 
             if (updateUser != null)
             {

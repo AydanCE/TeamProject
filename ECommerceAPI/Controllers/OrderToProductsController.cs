@@ -40,9 +40,9 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpPost("Update")]
-        public IActionResult Update(int id, OrderToProduct connection)
+        public IActionResult Update(OrderToProduct connection)
         {
-            var result = _connectionService.Update(id, connection);
+            var result = _connectionService.Update(connection);
 
             if (result.Success)
                 return Ok(result);

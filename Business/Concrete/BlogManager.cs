@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<Blog>(getBlog, "Blog was not found");
         }
 
-        public IResult Update(int id, Blog blog)
+        public IResult Update(Blog blog)
         {
-            Blog updateBlog = _blogDal.Get(b => b.Id == id);
+            Blog updateBlog = _blogDal.Get(b => b.Id == blog.Id);
 
             if (updateBlog != null)
             {

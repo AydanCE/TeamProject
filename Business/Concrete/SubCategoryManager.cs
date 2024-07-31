@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<SubCategory>(getSubCategory, "SubCategory was not found");
         }
 
-        public IResult Update(int id, SubCategory subCategory)
+        public IResult Update(SubCategory subCategory)
         {
-            SubCategory updateSubCategory = _subCategoryDal.Get(s => s.Id == id);
+            SubCategory updateSubCategory = _subCategoryDal.Get(s => s.Id == subCategory.Id);
 
             if (updateSubCategory != null)
             {

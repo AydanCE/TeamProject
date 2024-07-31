@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<ProductToSubCategory>(getConnection, "Connection was not found");
         }
 
-        public IResult Update(int id, ProductToSubCategory connection)
+        public IResult Update(ProductToSubCategory connection)
         {
-            ProductToSubCategory updateConnection = _connectionDal.Get(c => c.Id == id);
+            ProductToSubCategory updateConnection = _connectionDal.Get(c => c.Id == connection.Id);
 
             if (updateConnection != null)
             {

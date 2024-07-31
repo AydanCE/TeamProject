@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<Category>(getCategory, "Category was not found");
         }
 
-        public IResult Update(int id, Category category)
+        public IResult Update(Category category)
         {
-            Category updateCategory = _categoryDal.Get(c => c.Id == id);
+            Category updateCategory = _categoryDal.Get(c => c.Id == category.Id);
 
             if (updateCategory != null)
             {

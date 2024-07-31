@@ -40,9 +40,9 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpPost("Update")]
-        public IActionResult Update(int id, SubCategory subCategory)
+        public IActionResult Update(SubCategory subCategory)
         {
-            var result = _subCategoryService.Update(id, subCategory);
+            var result = _subCategoryService.Update(subCategory);
 
             if (result.Success)
                 return Ok(result);

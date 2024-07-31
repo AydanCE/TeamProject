@@ -12,7 +12,7 @@ namespace Business.Abstract
     {
         IResult Add(Region region);
         IResult Delete(int id);
-        IResult Update(int id, Region region);
+        IResult Update(Region region);
         IDataResult<List<Region>> GetAllRegions();
         IDataResult<Region> GetRegion(int id);
     }

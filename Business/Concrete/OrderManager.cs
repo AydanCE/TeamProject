@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<Order>(getOrder, "Order was not found");
         }
 
-        public IResult Update(int id, Order order)
+        public IResult Update(Order order)
         {
-            Order updateOrder = _orderDal.Get(o => o.Id == id);
+            Order updateOrder = _orderDal.Get(o => o.Id == order.Id);
 
             if (updateOrder != null)
             {

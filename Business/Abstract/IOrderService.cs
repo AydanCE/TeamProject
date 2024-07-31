@@ -12,7 +12,7 @@ namespace Business.Abstract
     {
         IResult Add(Order order);
         IResult Delete(int id);
-        IResult Update(int id, Order order);
+        IResult Update(Order order);
         IDataResult<List<Order>> GetAllOrders();
         IDataResult<Order> GetOrder(int id);
     }

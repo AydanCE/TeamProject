@@ -12,7 +12,7 @@ namespace Business.Abstract
     {
         IResult Add(Blog blog);
         IResult Delete(int id);
-        IResult Update(int id, Blog blog);
+        IResult Update(Blog blog);
         IDataResult<List<Blog>> GetAllBlogs();
         IDataResult<Blog> GetBlog(int id);
     }

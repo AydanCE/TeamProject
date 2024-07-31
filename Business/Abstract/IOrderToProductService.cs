@@ -12,7 +12,7 @@ namespace Business.Abstract
     {
         IResult Add(OrderToProduct connection);
         IResult Delete(int id);
-        IResult Update(int id, OrderToProduct connection);
+        IResult Update(OrderToProduct connection);
         IDataResult<List<OrderToProduct>> GetAllConnections();
         IDataResult<OrderToProduct> GetConnection(int id);
     }

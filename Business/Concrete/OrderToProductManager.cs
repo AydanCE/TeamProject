@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<OrderToProduct>(getConnection, "Connection was not found");
         }
 
-        public IResult Update(int id, OrderToProduct connection)
+        public IResult Update(OrderToProduct connection)
         {
-            OrderToProduct updateOrderToProduct = _connectionDal.Get(c => c.Id == id);
+            OrderToProduct updateOrderToProduct = _connectionDal.Get(c => c.Id == connection.Id);
 
             if (updateOrderToProduct != null)
             {

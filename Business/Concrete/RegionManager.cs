@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<Region>(getRegion, "Region was not found");
         }
 
-        public IResult Update(int id, Region region)
+        public IResult Update(Region region)
         {
-            Region updateRegion = _regionDal.Get(r => r.Id == id);
+            Region updateRegion = _regionDal.Get(r => r.Id == region.Id);
 
             if (updateRegion != null)
             {

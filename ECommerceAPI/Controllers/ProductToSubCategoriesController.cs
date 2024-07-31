@@ -41,9 +41,9 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpPost("Update")]
-        public IActionResult Update(int id, ProductToSubCategory connection)
+        public IActionResult Update(ProductToSubCategory connection)
         {
-            var result = _connectionService.Update(id, connection);
+            var result = _connectionService.Update(connection);
 
             if (result.Success)
                 return Ok(result);

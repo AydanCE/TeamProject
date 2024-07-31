@@ -61,9 +61,9 @@ namespace Business.Concrete
                 return new ErrorDataResult<Product>(getProduct, "Product was not found");
         }
 
-        public IResult Update(int id, Product product)
+        public IResult Update(Product product)
         {
-            Product updateProduct = _productDal.Get(p => p.Id == id);
+            Product updateProduct = _productDal.Get(p => p.Id == product.Id);
 
             if (updateProduct != null)
             {

@@ -40,9 +40,9 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpPost("Update")]
-        public IActionResult Update(int id, Region region)
+        public IActionResult Update(Region region)
         {
-            var result = _regionService.Update(id, region);
+            var result = _regionService.Update(region);
 
             if (result.Success)
                 return Ok(result);

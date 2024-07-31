@@ -12,7 +12,7 @@ namespace Business.Abstract
     {
         IResult Add(ProductToSubCategory connection);
         IResult Delete(int id);
-        IResult Update(int id, ProductToSubCategory connection);
+        IResult Update(ProductToSubCategory connection);
         IDataResult<List<ProductToSubCategory>> GetAllConnections();
         IDataResult<ProductToSubCategory> GetConnection(int id);
     }
