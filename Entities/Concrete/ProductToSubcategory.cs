@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class ProductToSubcategory : BaseEntity
+    public class ProductToSubCategory : BaseEntity
     {
         public int ProductId { get; set; }
-        public int SubcategoryId { get; set; }
+        public int SubCategoryId { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EF
 {
-    public class EFOrderToProduct: BaseReporsitory<OrderToProduct,AppDbContext>,IOrderToProduct
+    public class EFOrderToProductDal: BaseReporsitory<OrderToProduct,AppDbContext>,IOrderToProductDal
     {
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IProductToSubCategoryDal:IBaseReporsitory<ProductToSubcategory>
+    public interface IProductToSubCategoryDal:IBaseReporsitory<ProductToSubCategory>
     {
     }
 }

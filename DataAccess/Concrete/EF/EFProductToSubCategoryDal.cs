@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EF
 {
-    public class EFProductToSubCategoryDal : BaseReporsitory<ProductToSubcategory, AppDbContext>, IProductToSubCategoryDal
+    public class EFProductToSubCategoryDal : BaseReporsitory<ProductToSubCategory, AppDbContext>, IProductToSubCategoryDal
     {
     }
 }

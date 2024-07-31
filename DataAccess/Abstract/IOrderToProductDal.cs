@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IOrderToProduct : IBaseReporsitory<OrderToProduct>
+    public interface IOrderToProductDal : IBaseReporsitory<OrderToProduct>
     {
     }
 }

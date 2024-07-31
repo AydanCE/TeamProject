@@ -20,7 +20,7 @@ namespace DataAccess.Concrete.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<PrivacyPolicy> PrivacyPolicies { get; set; }
         public DbSet<Faq> Faqs { get; set; }
-        public DbSet<ProductToSubcategory> ProductToSubCategories { get; set; }
+        public DbSet<ProductToSubCategory> ProductToSubCategories { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<TermsAndCondition> TermsConditions { get; set; }
         public DbSet<About> Abouts { get; set; }
