@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface IAboutUsDal:IBaseReporsitory<About>
+    public interface IAboutUsDal:IBaseReporsitory<AboutUs>
     {
     }
 }

@@ -41,6 +41,20 @@ namespace Business.Dependency.Autofac
 
             builder.RegisterType<BlogManager>().As<IBlogService>().SingleInstance();
             builder.RegisterType<EFBlogDal>().As<IBlogDal>().SingleInstance();
+
+            builder.RegisterType<FaqManager>().As<IFaqService>().SingleInstance();
+            builder.RegisterType<EFFaqDal>().As<IFaqDal>().SingleInstance();
+
+            builder.RegisterType<PrivacyPolicyManager>().As<IPrivacyPolicyService>().SingleInstance();
+            builder.RegisterType<EFPrivacyPolicyDal>().As<IPrivacyPolicyDal>().SingleInstance();
+
+            builder.RegisterType<TermsAndConditionManager>().As<ITermsAndConditionService>().SingleInstance();
+            builder.RegisterType<EFTermsAndConditionDal>().As<ITermsAndConditionDal>().SingleInstance();
+
+            builder.RegisterType<AboutUsManager>().As<IAboutUsService>().SingleInstance();
+            builder.RegisterType<EFAboutUsDal>().As<IAboutUsDal>().SingleInstance();
+
+
         }
     }
 }

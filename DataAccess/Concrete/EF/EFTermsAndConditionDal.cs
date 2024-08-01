@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EF
 {
-    public class EFTermsConditionsDal: BaseReporsitory<TermsAndCondition,AppDbContext>,ITermsConditionsDal
+    public class EFTermsAndConditionDal: BaseReporsitory<TermsAndCondition,AppDbContext>,ITermsAndConditionDal
     {
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EF
 {
-    public class EFAboutUsDal : BaseReporsitory<About,AppDbContext>, IAboutUsDal
+    public class EFAboutUsDal : BaseReporsitory<AboutUs,AppDbContext>, IAboutUsDal
     {
     }
 }
