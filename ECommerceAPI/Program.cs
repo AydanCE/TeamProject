@@ -1,5 +1,8 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Business.Abstract;
 using Business.Concrete;
+using Business.Dependency.Autofac;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EF;
 
@@ -12,32 +15,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IProductService, ProductManager>();
-builder.Services.AddSingleton<IProductDal, EfProductDal>();
-
-builder.Services.AddSingleton<ICategoryService, CategoryManager>();
-builder.Services.AddSingleton<ICategoryDal, EFCategoryDal>();
-
-builder.Services.AddSingleton<ISubCategoryService, SubCategoryManager>();
-builder.Services.AddSingleton<ISubCategoryDal, EFSubCategoryDal>();
-
-builder.Services.AddSingleton<IProductToSubCategoryService, ProductToSubCategoryManager>();
-builder.Services.AddSingleton<IProductToSubCategoryDal, EFProductToSubCategoryDal>();
-
-builder.Services.AddSingleton<IUserService, UserManager>();
-builder.Services.AddSingleton<IUserDal, EFUserDal>();
-
-builder.Services.AddSingleton<IRegionService, RegionManager>();
-builder.Services.AddSingleton<IRegionDal, EFRegionDal>();
-
-builder.Services.AddSingleton<IOrderService, OrderManager>();
-builder.Services.AddSingleton<IOrderDal, EFOrderDal>();
-
-builder.Services.AddSingleton<IOrderToProductService, OrderToProductManager>();
-builder.Services.AddSingleton<IOrderToProductDal, EFOrderToProductDal>();
-
-builder.Services.AddSingleton<IBlogService, BlogManager>();
-builder.Services.AddSingleton<IBlogDal, EFBlogDal>();
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureContainer<ContainerBuilder>(builder =>
+{
+    builder.RegisterModule<AutofacBusinessModule>();
+});
 
 var app = builder.Build();
 
