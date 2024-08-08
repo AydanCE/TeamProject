@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class OrderToProduct : BaseEntity
+    public class OrderDetail : BaseEntity
     {
         public int OrderId { get; set; }
         public int ProductId { get; set; }
+        public double TotalPrice { get; set; }
+        public int Count { get; set; }
+        public bool IsDiscount {  get; set; }
+        public int DiscountPriceRate { get; set; }
     }
 }

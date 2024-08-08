@@ -10,10 +10,10 @@ namespace Business.Abstract
 {
     public interface IOrderToProductService
     {
-        IResult Add(OrderToProduct connection);
+        IResult Add(OrderDetail connection);
         IResult Delete(int id);
-        IResult Update(OrderToProduct connection);
-        IDataResult<List<OrderToProduct>> GetAllConnections();
-        IDataResult<OrderToProduct> GetConnection(int id);
+        IResult Update(OrderDetail connection);
+        IDataResult<List<OrderDetail>> GetAllConnections();
+        IDataResult<OrderDetail> GetConnection(int id);
     }
 }

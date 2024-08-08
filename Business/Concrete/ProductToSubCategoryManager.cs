@@ -16,7 +16,7 @@ namespace Business.Concrete
     {
         private readonly IProductToSubCategoryDal _connectionDal = connectionDal;
 
-        public IResult Add(ProductToSubCategory connection)
+        public IResult Add(ProductDetail connection)
         {
             if (connection != null)
             {
@@ -30,7 +30,7 @@ namespace Business.Concrete
 
         public IResult Delete(int id)
         {
-            ProductToSubCategory deletedConnection = _connectionDal.GetAll(c => c.IsDeleted == false).SingleOrDefault(c => c.Id == id);
+            ProductDetail deletedConnection = _connectionDal.GetAll(c => c.IsDeleted == false).SingleOrDefault(c => c.Id == id);
 
             if (deletedConnection != null)
             {
@@ -41,29 +41,29 @@ namespace Business.Concrete
             return new ErrorResult("Connection was not found");
         }
 
-        public IDataResult<List<ProductToSubCategory>> GetAllConnections()
+        public IDataResult<List<ProductDetail>> GetAllConnections()
         {
             var connections = _connectionDal.GetAll(c => c.IsDeleted == false);
 
             if (connections.Count != 0)
-                return new SuccessDataResult<List<ProductToSubCategory>>(connections, "Connections loaded");
+                return new SuccessDataResult<List<ProductDetail>>(connections, "Connections loaded");
             else
-                return new ErrorDataResult<List<ProductToSubCategory>>(connections, "List of connections is empty");
+                return new ErrorDataResult<List<ProductDetail>>(connections, "List of connections is empty");
         }
 
-        public IDataResult<ProductToSubCategory> GetConnection(int id)
+        public IDataResult<ProductDetail> GetConnection(int id)
         {
-            ProductToSubCategory getConnection = _connectionDal.Get(p => p.Id == id);
+            ProductDetail getConnection = _connectionDal.Get(p => p.Id == id);
 
             if (getConnection != null)
-                return new SuccessDataResult<ProductToSubCategory>(getConnection, "Connection loaded");
+                return new SuccessDataResult<ProductDetail>(getConnection, "Connection loaded");
             else
-                return new ErrorDataResult<ProductToSubCategory>(getConnection, "Connection was not found");
+                return new ErrorDataResult<ProductDetail>(getConnection, "Connection was not found");
         }
 
-        public IResult Update(ProductToSubCategory connection)
+        public IResult Update(ProductDetail connection)
         {
-            ProductToSubCategory updateConnection = _connectionDal.Get(c => c.Id == connection.Id);
+            ProductDetail updateConnection = _connectionDal.Get(c => c.Id == connection.Id);
 
             if (updateConnection != null)
             {

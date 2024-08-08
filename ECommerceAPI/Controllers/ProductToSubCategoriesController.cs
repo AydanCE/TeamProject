@@ -19,7 +19,7 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpPost("Add")]
-        public IActionResult Add(ProductToSubCategory connection)
+        public IActionResult Add(ProductDetail connection)
         {
             var result = _connectionService.Add(connection);
 
@@ -41,7 +41,7 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpPost("Update")]
-        public IActionResult Update(ProductToSubCategory connection)
+        public IActionResult Update(ProductDetail connection)
         {
             var result = _connectionService.Update(connection);
 

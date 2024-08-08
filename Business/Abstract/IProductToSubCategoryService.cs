@@ -10,10 +10,10 @@ namespace Business.Abstract
 {
     public interface IProductToSubCategoryService
     {
-        IResult Add(ProductToSubCategory connection);
+        IResult Add(ProductDetail connection);
         IResult Delete(int id);
-        IResult Update(ProductToSubCategory connection);
-        IDataResult<List<ProductToSubCategory>> GetAllConnections();
-        IDataResult<ProductToSubCategory> GetConnection(int id);
+        IResult Update(ProductDetail connection);
+        IDataResult<List<ProductDetail>> GetAllConnections();
+        IDataResult<ProductDetail> GetConnection(int id);
     }
 }

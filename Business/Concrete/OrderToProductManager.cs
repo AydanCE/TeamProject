@@ -16,7 +16,7 @@ namespace Business.Concrete
     {
         private readonly IOrderToProductDal _connectionDal = connectionDal;
 
-        public IResult Add(OrderToProduct connection)
+        public IResult Add(OrderDetail connection)
         {
             if (connection != null)
             {
@@ -30,7 +30,7 @@ namespace Business.Concrete
 
         public IResult Delete(int id)
         {
-            OrderToProduct deletedConnection = _connectionDal.GetAll(c => c.IsDeleted == false).SingleOrDefault(c => c.Id == id);
+            OrderDetail deletedConnection = _connectionDal.GetAll(c => c.IsDeleted == false).SingleOrDefault(c => c.Id == id);
 
             if (deletedConnection != null)
             {
@@ -41,29 +41,29 @@ namespace Business.Concrete
             return new ErrorResult("Connection was not found");
         }
 
-        public IDataResult<List<OrderToProduct>> GetAllConnections()
+        public IDataResult<List<OrderDetail>> GetAllConnections()
         {
             var connections = _connectionDal.GetAll(c => c.IsDeleted == false);
 
             if (connections.Count != 0)
-                return new SuccessDataResult<List<OrderToProduct>>(connections, "Connections loaded");
+                return new SuccessDataResult<List<OrderDetail>>(connections, "Connections loaded");
             else
-                return new ErrorDataResult<List<OrderToProduct>>(connections, "List of connections is empty");
+                return new ErrorDataResult<List<OrderDetail>>(connections, "List of connections is empty");
         }
 
-        public IDataResult<OrderToProduct> GetConnection(int id)
+        public IDataResult<OrderDetail> GetConnection(int id)
         {
-            OrderToProduct getConnection = _connectionDal.Get(c => c.Id == id);
+            OrderDetail getConnection = _connectionDal.Get(c => c.Id == id);
 
             if (getConnection != null)
-                return new SuccessDataResult<OrderToProduct>(getConnection, "Connection loaded");
+                return new SuccessDataResult<OrderDetail>(getConnection, "Connection loaded");
             else
-                return new ErrorDataResult<OrderToProduct>(getConnection, "Connection was not found");
+                return new ErrorDataResult<OrderDetail>(getConnection, "Connection was not found");
         }
 
-        public IResult Update(OrderToProduct connection)
+        public IResult Update(OrderDetail connection)
         {
-            OrderToProduct updateOrderToProduct = _connectionDal.Get(c => c.Id == connection.Id);
+            OrderDetail updateOrderToProduct = _connectionDal.Get(c => c.Id == connection.Id);
 
             if (updateOrderToProduct != null)
             {

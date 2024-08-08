@@ -10,8 +10,10 @@ namespace Entities.Concrete
 {
     public class Order : BaseEntity
     {
-        public string OrderCode { get; set; }
-        public double TotalPrice { get; set; }
+        public string Description { get; set; }
+        public DateTime OrderDate { get; set; }
+        public bool Status { get; set; }
+        public bool IsDelivery { get; set; }
         public int UserId { get; set; }
         public int RegionId { get; set; }
     }

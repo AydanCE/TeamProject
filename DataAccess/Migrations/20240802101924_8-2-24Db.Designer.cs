@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240730195803_mig_1")]
-    partial class mig_1
+    [Migration("20240802101924_8-2-24Db")]
+    partial class _8224Db
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Entities.Concrete.About", b =>
+            modelBuilder.Entity("Entities.Concrete.AboutUs", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -233,7 +233,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Entities.Concrete.ProductToSubcategory", b =>
+            modelBuilder.Entity("Entities.Concrete.ProductToSubCategory", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -247,7 +247,7 @@ namespace DataAccess.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SubcategoryId")
+                    b.Property<int>("SubCategoryId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

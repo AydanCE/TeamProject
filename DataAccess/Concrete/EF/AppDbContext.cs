@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EF
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-K0V6ESA\SQLEXPRESS;Database=TeamProject;Trusted_Connection = true;TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=TeamProject;Trusted_Connection = true;TrustServerCertificate=true");
 
         }
         public DbSet<Blog> Blogs { get; set; }
@@ -20,13 +20,13 @@ namespace DataAccess.Concrete.EF
         public DbSet<Product> Products { get; set; }
         public DbSet<PrivacyPolicy> PrivacyPolicies { get; set; }
         public DbSet<Faq> Faqs { get; set; }
-        public DbSet<ProductToSubCategory> ProductToSubCategories { get; set; }
+        public DbSet<ProductDetail> ProductToSubCategories { get; set; }
         public DbSet<SubCategory> SubCategories { get; set; }
         public DbSet<TermsAndCondition> TermsConditions { get; set; }
         public DbSet<AboutUs> Abouts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Region> Regions { get; set; }
-        public DbSet<OrderToProduct> OrdersToProducts { get; set; }
+        public DbSet<OrderDetail> OrdersToProducts { get; set; }
         public DbSet<User> Users { get; set; }
     }
 }

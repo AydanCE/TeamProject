@@ -21,7 +21,7 @@ namespace DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Entities.Concrete.About", b =>
+            modelBuilder.Entity("Entities.Concrete.AboutUs", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -230,7 +230,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Entities.Concrete.ProductToSubcategory", b =>
+            modelBuilder.Entity("Entities.Concrete.ProductToSubCategory", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -244,7 +244,7 @@ namespace DataAccess.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SubcategoryId")
+                    b.Property<int>("SubCategoryId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
